@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tool Download</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    /* RESET & BASE */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
+    body { background: linear-gradient(135deg,#667eea,#764ba2); color:#fff; min-height:100vh; display:flex; justify-content:center; align-items:center; padding:20px; overflow-x:hidden; position:relative; }
+
+    /* CONTAINER */
+    .container { 
+        background: rgba(0,0,0,0.85); 
+        padding:30px; 
+        border-radius:20px; 
+        max-width:500px; 
+        width:100%; 
+        box-shadow:0 10px 30px rgba(0,0,0,0.5); 
+        opacity:0; 
+        transform: translateY(20px); 
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+        to { opacity:1; transform: translateY(0); }
+    }
+
+    h1 { text-align:center; margin-bottom:20px; font-weight:700; font-size:2rem; color:#ffd700; }
+    h2 { margin-top:20px; color:#ff6347; font-weight:500; }
+
+    /* BUTTON */
+    .btn {
+        display:block;
+        text-decoration:none;
+        background: linear-gradient(135deg,#ff6347,#ff4500);
+        color:#fff;
+        padding:15px;
+        margin:10px 0;
+        border-radius:10px;
+        text-align:center;
+        font-weight:500;
+        transition: all 0.5s ease;
+        box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+    .btn:hover { 
+        background: linear-gradient(135deg,#ff4500,#ff7f50);
+        transform: scale(1.05);
+        box-shadow:0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    /* CONTACT */
+    .contact a { color:#00ffff; text-decoration:none; font-weight:500; transition:0.3s; }
+    .contact a:hover { text-decoration:underline; color:#7fffd4; }
+
+    /* RANDOM TEXT EFFECT */
+    .random-text {
+        position:absolute;
+        font-size:1.2rem;
+        font-weight:700;
+        color:#ffff00;
+        pointer-events:none;
+        user-select:none;
+        animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+        0% { opacity:1; transform: translateY(0); }
+        100% { opacity:0; transform: translateY(-50px); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:600px) {
+        .container { padding:20px; border-radius:15px; }
+        h1 { font-size:1.5rem; }
+        .btn { padding:12px; }
+        .random-text { font-size:1rem; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📦 Download Tools</h1>
+
+    <h2>Tải Tool:</h2>
+    <a href="https://example.com/bvtool21.zip" class="btn" target="_blank">Full Source Bvtool 2.1</a>
+    <a href="https://example.com/bvtool42.zip" class="btn" target="_blank">Full Source Bvtool 4.2</a>
+    <a href="https://example.com/ptoolvip.zip" class="btn" target="_blank">Full Source PTool Vip</a>
+
+    <h2>Hướng Dẫn:</h2>
+    <p>Chưa có</p>
+
+    <h2>Liên Hệ:</h2>
+    <p class="contact"><a href="https://zalo.me/0915948201" target="_blank">Zalo</a></p>
+</div>
+
+<script>
+    // CHỐNG CHUỘT PHẢI
+    document.addEventListener('contextmenu', function(e) {
+        alert('Chức năng chuột phải đã bị vô hiệu hóa!');
+        e.preventDefault();
+    });
+
+    // CHỐNG DEVTOOLS CƠ BẢN
+    let devtools = false;
+    const threshold = 160;
+    window.addEventListener('resize', () => {
+        if(window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold){
+            if(!devtools){
+                devtools = true;
+                alert('Vui lòng không mở DevTools!');
+            }
+        }
+    });
+
+    // CẢNH BÁO KHI BẤM F12
+    document.addEventListener('keydown', function(e) {
+        if(e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === "I")){
+            alert('DevTools bị chặn!');
+            e.preventDefault();
+        }
+    });
+
+    // RANDOM TEXT KHI NHẤN
+    const texts = [
+        "PhuocAn DepZai",
+        "Bvtool đỉnh phết",
+        "Bvzone ngon thí"
+    ];
+
+    document.addEventListener('click', function(e){
+        const randomText = texts[Math.floor(Math.random() * texts.length)];
+        const span = document.createElement('span');
+        span.className = 'random-text';
+        span.style.left = e.pageX + 'px';
+        span.style.top = e.pageY + 'px';
+        span.textContent = randomText;
+        document.body.appendChild(span);
+        setTimeout(() => span.remove(), 1000); // 1s thì biến mất
+    });
+</script>
+
+</body>
+</html>
