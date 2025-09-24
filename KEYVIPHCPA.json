@@ -1,0 +1,19 @@
+{
+  "keys": [
+    {
+      "key": "testvipprophuocan9999",
+      "expire": "2099-12-31 23:59:59",
+      "device_id": "HCPA_271236"
+    },
+    {
+      "key": "test",
+      "expire": "2024-09-01 12:00:00",
+      "device_id": "j"
+    },
+    {
+      "key": "cc",
+      "expire": "2025-10-01 00:00:00",
+      "device_id": "h"
+    }
+  ]
+}
