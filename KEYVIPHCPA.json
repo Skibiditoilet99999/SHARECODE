@@ -19,6 +19,11 @@
       "key": "phimsex",
       "expire": "2029-10-01 00:00:00",
       "device_id": "HCPA_485846"
+    },
+    {
+      "key": "PHUOCANVIP",
+      "expire": "2099-12-31 23:59:59",
+      "device_id": "HCPA_802421"
     }
   ]
 }
