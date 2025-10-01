@@ -24,6 +24,11 @@
       "key": "PHUOCANVIP",
       "expire": "2099-12-31 23:59:59",
       "device_id": "HCPA_802421"
+    },
+    {
+      "key": "KEY30DAY",
+      "expire": "2025-10-30 23:59:59",
+      "device_id": "HCPA_091976"
     }
   ]
 }
