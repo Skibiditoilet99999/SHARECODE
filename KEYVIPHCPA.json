@@ -34,6 +34,11 @@
       "key": "vthanglgbt2k17",
       "expire": "2025-10-30 23:59:59",
       "device_id": "HCPA_589702"
+    },
+    {
+      "key": "VIP30NGAY",
+      "expire": "2025-10-31 23:59:59",
+      "device_id": "HCPA_787277"
     }
   ]
 }
