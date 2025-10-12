@@ -39,6 +39,11 @@
       "key": "VIP30NGAY",
       "expire": "2025-10-31 23:59:59",
       "device_id": "HCPA_123902"
+    },
+    {
+      "key": "30NGAYNE",
+      "expire": "2025-11-01 23:59:59",
+      "device_id": "HCPA_189534"
     }
   ]
 }
